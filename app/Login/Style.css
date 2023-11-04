@@ -1,0 +1,251 @@
+.main-login {
+  height: 100vh;
+  background: #f0f2f5;
+}
+.main-c-2 {
+  opacity: 0.2;
+}
+.sec-main-login {
+  width: 100%;
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 6.25rem;
+}
+.box1-facebook-login {
+  margin-bottom: 4.37rem;
+}
+.box2-login-form {
+  height: 21.86rem;
+  width: 24.75rem;
+  background: #ffffff;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px 5px #dbdddf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-login {
+  width: 22.75rem;
+  height: 3.25rem;
+  border: 1px solid #dbdddf;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-top: 0.93rem;
+}
+.input-login:focus {
+  outline: #0866ff 1px solid;
+}
+.login-btn {
+  width: 22.75rem;
+  height: 3.25rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  background-color: #1877f2;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-link {
+  color: #1877f2;
+  text-decoration: underline;
+  font-size: 0.87rem;
+  margin-top: 0.93rem;
+}
+.login-underline {
+  width: 90%;
+
+  border-bottom: 1px solid #dadde1;
+  margin-top: 10px;
+  /* padding: 10px 0; */
+}
+.login-btn-2 {
+  background-color: #36a420;
+  height: 3rem;
+  width: 12.02rem;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-top: 1.25rem;
+}
+.login-btn-22{
+    background-color: #ffff;
+    height: 2.25rem;
+    width: 19rem;
+    border: 1px solid #606770;
+    color: #606770;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top:1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-heading {
+  font-size: 3.43rem;
+  font-weight: 700;
+
+  color: #0866ff;
+}
+.pragraf-login {
+  font-size: 1.56rem;
+  font-weight: 480;
+
+  /* width: 100%; */
+}
+.register-part {
+  position: absolute;
+  height:33.55rem;
+  width:27rem;
+  background-color: #ffff;
+  top: 5rem;
+  left: 35vw;
+  right: 35vw;
+  box-shadow: 0 0 10px 2px #dbdddf;
+  border-radius: 4px;
+}
+.p-reg {
+  color: #606770;
+  font-size: 0.81rem;
+  margin-top: 5px;
+}
+.icons {
+  color: #606771;
+}
+.botom-line-reg {
+  border-bottom: 1px solid #dadde1;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .sec-main-login {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .box1-facebook-login {
+    width: 24.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .login-heading {
+    font-size: 3.43rem;
+    font-weight: 700;
+    text-align: center;
+    color: #0866ff;
+  }
+
+  .pragraf-login {
+    font-size: 1.25rem;
+    text-align: justify;
+  }
+  .register-part {
+    left: 27vw;
+    right: 27vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html{
+    overflow-x: hidden;
+}
+  .register-part {
+    left: 15vw;
+    right: 35vw;
+  }
+  
+}
+@media only screen and (max-width: 550px) {
+    .main-login {
+        height: 100vh;
+        background: #ffff;
+      }
+    .register-part {
+      left: 10vw;
+      /* right: vw; */
+    }
+    .box2-login-form {
+        height:21.86rem;
+        width: 24.75rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        background: #ffffff;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    .input-login {
+        width: 20rem;
+        height: 3rem;
+        background: #F5F6F7;
+        border-radius: 6px;
+        padding: 0.87rem 1rem;
+        /* margin-top:0.93rem; */
+      }
+      .pragraf-login{
+        display: none;
+      }
+      .login-btn {
+        width: 20rem;
+        height: 3rem;
+        border-radius: 4px;
+        margin-top: 1rem;
+        background-color: #1877f2;
+        color: white;
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+  @media only screen and (max-width: 450px) {
+    .main-login {
+        height: 100vh;
+        background: #ffff;
+      }
+    .register-part {
+      left: 10vw;
+      /* right: vw; */
+    }
+    .input-login {
+      width: 20rem;
+      height: 3rem;
+      background: #F5F6F7;
+      border-radius: 6px;
+      padding: 0.87rem 1rem;
+      margin-top:0.93rem;
+    }
+    .box2-login-form {
+        height:21.86rem;
+        width: 20.75rem;
+        background: #ffffff;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    .input-login {
+        width: 20rem;
+        height: 3rem;
+        background: #F5F6F7;
+        border-radius: 6px;
+        padding: 0.87rem 1rem;
+        /* margin-top:0.93rem; */
+      }
+      .pragraf-login{
+        display: none;
+      }
+  }
+
