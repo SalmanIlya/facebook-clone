@@ -1,20 +1,44 @@
 "use client";
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import Link from "next/link";
+import axios from "axios";
 
 const page = () => {
-const [Email, setEmail] = useState("")
-const [Password, setPassword] = useState("")
-const [ConfurmPassword, setConfurmPassword] = useState("")
+  const [username, setusername] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const [ConfurmPassword, setConfurmPassword] = useState("");
 
-const registerUser=()=>{
+  const registerUser = () => {
+    if (!username) {
+      alert("all fields are required");
+    } else if (!Email) {
+      alert("all fields are required");
 
-}
-useEffect(()=>{
- 
-},[])
+    } else if (!Password) {
+      alert("all fields are required");
 
+    } else if (!ConfurmPassword) {
+      alert("all fields are required");
+
+    } else {
+      if (Password === ConfurmPassword) {
+        const userdata = {
+          username,
+          Email,
+          Password,
+        };
+        axios
+          .post("", userdata)
+          .then(() => {})
+          .catch(() => {});
+      } else {
+        alert("password does not match");
+      }
+    }
+  };
+  useEffect(() => {}, []);
 
   return (
     <div className="relative overflow-x-hidden">
@@ -29,35 +53,48 @@ useEffect(()=>{
           </div>
           <div>
             <div className="box2-reg-form">
-               <input
-              type="text"
-              onChange={(e)=>setEmail(e.target.value)}
-              className="input-reg"
-              placeholder="Email address "
-            /> <input
-            type="text"
-            className="input-reg"
-            placeholder="Password"
-            onChange={(e)=>setPassword(e.target.value)}
-          />
               <input
+                type="text"
+                value={username}
+                onChange={(e) => setusername(e.target.value)}
+                className="input-reg"
+                placeholder="Email address "
+              />
+              <input
+                type="text"
+                value={Email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="input-reg"
+                placeholder="Email address "
+              />
+              <input
+                value={Password}
+                type="text"
+                className="input-reg"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <input
+                value={ConfurmPassword}
                 type="text"
                 className="input-reg"
                 placeholder="Confurm Password"
-                onChange={(e)=>setConfurmPassword(e.target.value)}
+                onChange={(e) => setConfurmPassword(e.target.value)}
               />
-              <Link href={""} className="reg-btn" onClick={()=>{registerUser()}}>Sign up</Link>
+              <Link
+                href={""}
+                className="reg-btn"
+                onClick={() => {
+                  registerUser();
+                }}
+              >
+                Sign up
+              </Link>
               <Link href={"/Login"}>
                 {" "}
-                <button
-                  className="reg-btn-2"
-                  
-                >
-                  Al'ready have an account
-                </button>
+                <button className="reg-btn-2">Al'ready have an account</button>
               </Link>
             </div>
-           
           </div>
         </div>
       </div>
