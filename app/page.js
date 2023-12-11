@@ -11,12 +11,7 @@ const page = () => {
   },[])
   return (
     <div>
-    
-      <button onClick={()=>{}}>Log out</button>: 
-      <Link href={"/Login"}>Login</Link>
-
-    
-     <Home/>
+    <Home/>
     </div>
   )
 }
