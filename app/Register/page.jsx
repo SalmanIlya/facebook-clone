@@ -1,50 +1,68 @@
-import React from 'react'
-import {AiOutlineLeft} from "react-icons/ai"
-import "./style.css"
-import Link from 'next/link'
+"use client";
+import React, { useEffect, useState }  from "react";
+import "./style.css";
+import Link from "next/link";
+
 const page = () => {
-  return (
-    <div>
-     <div className='reg-header flex flex-row justify-between items-center text-white'>
-      <Link href={"/Login"}>
-<AiOutlineLeft className='text-2xl'/>
-      
-      </Link>
-<p>join Facebook</p>
-<div></div>
-     </div>
-     <div className='flex flex-col justify-center items-center'>
-      <h1 className='text-xl mt-5 font-bold'>What's your name?
-</h1>
-<p>Enter the name you use in real life.</p>
-      <div className='main-text-box flex flex-row px-5'>
-        <div className='flex flex-col w-full p-2 '>
-          <label htmlFor="First name">First name</label>
-          <input type='text' className='input-reg '/>
-        </div>
-        <div className='flex flex-col w-full p-2'>
-          <label htmlFor="First name">Surname</label>
-          <input type='text'  className='input-reg'/> 
-        </div>
-        <br />
-        
-      </div>
-      <div>
-      <button className='btn-reg-1'>
-        Next
-      </button>
-      </div>
-    
+const [Email, setEmail] = useState("")
+const [Password, setPassword] = useState("")
+const [ConfurmPassword, setConfurmPassword] = useState("")
 
-     </div>
-     <p className='text-xs m-2'>
-Already have an account?</p>
+const registerUser=()=>{
 
-<div className='flex flex-col justify-center items-center '>
-  <p className='reg-bottom'>Meta © 2023</p>
-</div>
-    </div>
-  )
 }
+useEffect(()=>{
+ 
+},[])
 
-export default page
+
+  return (
+    <div className="relative overflow-x-hidden">
+      <div className="main-reg">
+        <div className="sec-main-reg ">
+          <div className="box1-facebook-reg">
+            <h1 className="reg-heading">facebook</h1>
+            <p className="pragraf-reg md:hidden sm:hidden lg:block">
+              Facebook helps you connect and share <br /> with the people in
+              your life.
+            </p>
+          </div>
+          <div>
+            <div className="box2-reg-form">
+               <input
+              type="text"
+              onChange={(e)=>setEmail(e.target.value)}
+              className="input-reg"
+              placeholder="Email address "
+            /> <input
+            type="text"
+            className="input-reg"
+            placeholder="Password"
+            onChange={(e)=>setPassword(e.target.value)}
+          />
+              <input
+                type="text"
+                className="input-reg"
+                placeholder="Confurm Password"
+                onChange={(e)=>setConfurmPassword(e.target.value)}
+              />
+              <Link href={""} className="reg-btn" onClick={()=>{registerUser()}}>Sign up</Link>
+              <Link href={"/Login"}>
+                {" "}
+                <button
+                  className="reg-btn-2"
+                  
+                >
+                  Al'ready have an account
+                </button>
+              </Link>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default page;
