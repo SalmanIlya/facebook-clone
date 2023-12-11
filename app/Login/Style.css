@@ -2,6 +2,7 @@
   height: 100vh;
   background: #f0f2f5;
 }
+
 .main-c-2 {
   opacity: 0.2;
 }
@@ -21,9 +22,10 @@
 .box2-login-form {
   height: 21.86rem;
   width: 24.75rem;
-  background: #ffffff;
+  /* background: #ffffff; */
   border-radius: 7px;
   box-shadow: 5px 5px 5px 5px #dbdddf;
+  background-color:white ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +166,12 @@
   
 }
 @media only screen and (max-width: 550px) {
-    .main-login {
+  
+.login-heading {
+  font-size: 2rem;
+
+}  
+  .main-login {
         height: 100vh;
         background: #ffff;
       }
@@ -186,7 +193,7 @@
       }
     .input-login {
         width: 20rem;
-        height: 3rem;
+        height: 2.5rem;
         background: #F5F6F7;
         border-radius: 6px;
         padding: 0.87rem 1rem;
@@ -211,6 +218,13 @@
       }
   }
   @media only screen and (max-width: 450px) {
+    
+.login-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  color: #0866ff;
+}
     .main-login {
         height: 100vh;
         background: #ffff;
