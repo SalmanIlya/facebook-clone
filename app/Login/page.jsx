@@ -4,17 +4,14 @@ import "./Style.css";
 import Link from "next/link";
 
 const page = () => {
-  const [changeClass, setchangeClass] = useState(false);
-  const [screenSize, setscreenSize] = useState(0);
+
   const clickHandle = () => {
-    setchangeClass(true);
+ 
   };
-  useEffect(() => {
-    setscreenSize(window.innerWidth);
-  }, []);
+ 
   return (
     <div className="relative overflow-x-hidden">
-      <div className={changeClass ? `main-login main-c-2 z-0 ` : "main-login"}>
+      <div className={ ` main-login`}>
         <div className="sec-main-login">
           <div className="box1-facebook-login">
             <h1 className="login-heading">facebook</h1>
@@ -28,7 +25,7 @@ const page = () => {
               <input
                 type="text"
                 className="input-login"
-                placeholder="Email address or phone number"
+                placeholder="Email address"
               />
               <input
                 type="text"
