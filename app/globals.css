@@ -5,6 +5,11 @@
 html{
     overflow-x: hidden;
 }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .main-reg-comp{
     display: flex;
     flex-direction: column;
