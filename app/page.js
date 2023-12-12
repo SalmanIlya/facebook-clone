@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import Home from './Component/Home'
+import Home from './Component/Home/Home'
 
 const page = () => {
 
