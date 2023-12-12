@@ -1,0 +1,18 @@
+.postdiv{
+    height: 7.6rem;
+    background-color: white;
+    width: 36.8rem;
+    border-radius: 10px; 
+    margin-top: 10px;
+    
+}
+.post {
+    height: 500px;
+    width: 36.8rem;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.profile{
+    border: 0.5px  solid rgb(222, 211, 211);
+}
