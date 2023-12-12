@@ -6,6 +6,7 @@ const page = () => {
   return (
     <div>
         <Navbar/>
+        <div className='h-screen bg-gray-100'>  </div>
     </div>
   )
 }

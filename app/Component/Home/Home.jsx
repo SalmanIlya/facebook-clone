@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className=''>
       <Navbar/>
-      <div className=''></div>
+      <div className='bg-gray-100 h-screen'></div>
     </div>
   )
 }
