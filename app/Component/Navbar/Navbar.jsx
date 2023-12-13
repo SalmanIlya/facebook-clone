@@ -19,7 +19,7 @@ const PathName=usePathname()
   return (
     <div className=''>
    <div className="navbar bg-white h-auto pt-3 pb-1 w-full xl:flex-nowrap  flex flex-row flex-wrap md:flex-nowrap   items-center px-10 md:px-5">
-    <div className="logo flex flex-row justify-center  items-center mr-20 sm:w-full ">
+    <div className="logo flex flex-row justify-center  items-center mr-12 sm:w-full ">
     <FaFacebook className='text-blue-500 text-4xl sm:mr-10  mr-3'/>
     <div className=" flex flex-row justify-center items-center h-10 rounded-full px-3 bg-gray-100" 
    
