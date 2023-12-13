@@ -1,6 +1,7 @@
 .box1{
     width: 360px;
     height: auto;
+    margin-left: 100px;
 }
 .postdiv{
     height: 7.6rem;
@@ -22,4 +23,59 @@
 }
 .profile{
     border: 0.5px  solid rgb(222, 211, 211);
+}
+
+@media screen and (max-width:650px) {
+    .postdiv{
+        width: 31rem;
+    }
+    .post{
+        width: 31rem;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .postdiv{
+        width: 29.5rem;
+    }
+    .post{
+        width: 29.5rem;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .postdiv{
+        width: 27.5rem;
+    }
+    .post{
+        width: 27.5rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .postdiv{
+        width: 26rem;
+    }
+    .post{
+        width: 26rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .postdiv{
+        width: 24rem;
+    }
+    .post{
+        width: 24rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .postdiv{
+        width: 22rem;
+    }
+    .post{
+        width: 22rem;
+    }
 }
