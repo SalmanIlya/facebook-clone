@@ -9,10 +9,10 @@ import { FaRegPlusSquare, FaPlusSquare  } from "react-icons/fa";
 import { FiBell } from "react-icons/fi";
 import { GoBellFill } from "react-icons/go";
 import { BsPerson,BsFillPersonFill } from "react-icons/bs";
+import { IoPersonAdd ,IoPersonAddOutline } from "react-icons/io5";
 import Link from 'next/link';
 
 const Navbar = () => {
-
 const PathName=usePathname()
  console.log(PathName==="/");
 
@@ -34,6 +34,11 @@ const PathName=usePathname()
   <Link href={"/"}>
   {
   PathName==="/" ?<GoHomeFill className=' md:mx-5 lg:mx-4 xl:w-14 xl:mx-10 text-3xl pb-1 text-blue-500 border-b-4 w-8 md:w-8 sm:w-8   border-blue-500  sm:mx-8 mx-7 mt-2 lg:w-8'/> :<GoHome className='lg:mx-4 text-2xl md:mx-5 text-gray-500  w-5 md:w-8 sm:w-8 xl:w-14 xl:mx-10   sm:mx-8 mx-7 mt-2 lg:w-8'/>
+}
+  </Link>
+  <Link href={"/FriendRequest"}>
+  {
+  PathName==="/FriendRequest" ?<IoPersonAdd className=' md:mx-5 lg:mx-4 xl:w-14 xl:mx-10 text-3xl pb-1 text-blue-500 border-b-4 w-8 md:w-8 sm:w-8   border-blue-500  sm:mx-8 mx-7 mt-2 lg:w-8'/> :<IoPersonAddOutline className='lg:mx-4 text-2xl md:mx-5 text-gray-500  w-5 md:w-8 sm:w-8 xl:w-14 xl:mx-10   sm:mx-8 mx-7 mt-2 lg:w-8'/>
 }
   </Link>
 
