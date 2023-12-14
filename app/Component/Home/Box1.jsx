@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import {  HiUserGroup } from "react-icons/hi";
@@ -12,7 +13,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const Box = () => {
   return (
     <div>
-         <div className='box1 w-64 flex flex-col'>
+         <div className='h-box1 w-64 flex flex-col'>
 
 <div className='flex flex-row justify-start mt-5 ml-2 '>
 <Image src={"/image/profile.jpg"} className="rounded-full" height={20} width={30}/>

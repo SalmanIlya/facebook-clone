@@ -11,7 +11,7 @@ const Home = () => {
     <div className=''>
       <Navbar/>
       <div className='bg-gray-100 min-h-screen max-h-auto '>
-        <div className='flex flex-row justify-center '>
+        <div className='flex flex-row justify-center  '>
           {/* box-1  */}
          <div className='hidden lg:block xl:block'>
          <Box1/>

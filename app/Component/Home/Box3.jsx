@@ -1,10 +1,11 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 
 const Box3 = () => {
   return (
     <div>
-          <div className="box3 w-96 ml-10"  >
+          <div className="box3  w-96">
             <h1 className='mt-5 font-bold text-gray-400 text-sm mb-3'>Find Friends</h1>
             <div>
               {/* add friends  */}

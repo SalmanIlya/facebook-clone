@@ -31,6 +31,7 @@
     }
     .post{
         width: 31rem;
+      height: 400px;  
     }
 }
 
@@ -41,6 +42,8 @@
     }
     .post{
         width: 29.5rem;
+        height: 350px;
+        margin-bottom: 20px;
     }
 }
 
@@ -50,6 +53,7 @@
     }
     .post{
         width: 27.5rem;
+        height: 330px;
     }
 }
 
@@ -59,23 +63,40 @@
     }
     .post{
         width: 26rem;
+        height: 310px;
     }
 }
 
 @media screen and (max-width:450px) {
     .postdiv{
-        width: 24rem;
+        width: 21rem;
     }
     .post{
-        width: 24rem;
+        width: 21rem;
     }
 }
 
 @media screen and (max-width:400px) {
     .postdiv{
-        width: 22rem;
+        width: 19rem;
     }
     .post{
-        width: 22rem;
+        width: 19rem;
+    }
+}
+@media screen and (max-width:350px) {
+    .postdiv{
+        width: 17rem;
+    }
+    .post{
+        width: 17rem;
+    }
+}
+@media screen and (max-width:300px) {
+    .postdiv{
+        width: 15rem;
+    }
+    .post{
+        width: 15rem;
     }
 }
