@@ -5,7 +5,9 @@ import { RiVideoAddFill } from "react-icons/ri";
 import { MdPhotoLibrary } from "react-icons/md";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { HiOutlineDotsHorizontal, HiUserGroup } from "react-icons/hi";
-
+import { AiOutlineLike } from "react-icons/ai";
+import { TbMessage2 } from "react-icons/tb";
+import { RiShareForwardLine } from "react-icons/ri";
 const Box2 = () => {
   return (
     <div>
@@ -36,43 +38,110 @@ const Box2 = () => {
 </div>
 {/* get post  */}
 <div className='post flex flex-col justify-between '>
-  <div className='flex flex-row justify-between items-center py-4'>
-  <div className='flex flex-row items-center pt-3 pl-2' >
+  <div className='flex flex-row justify-between items-center py-1'>
+  <div className='flex flex-row items-center  pl-2' >
 <Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/1.jpg"} height={1} width={200} className=' w-full  rounded-b-xl   '/>
+<Image src={"/image/4.jpg"} height={1} width={50} className=' w-full   '/>
+
+<div className='flex flex-row justify-between my-2 items-center '>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Like</span> < AiOutlineLike/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Comment</span> < TbMessage2/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Share</span> < RiShareForwardLine/> 
+</div>
+</div>
+
 
 </div>
 <br />
 <div className='post flex flex-col justify-between '>
-  <div className='flex flex-row justify-between items-center py-4'>
-  <div className='flex flex-row items-center pt-3 pl-2' >
+  <div className='flex flex-row justify-between items-center py-1'>
+  <div className='flex flex-row items-center  pl-2' >
 <Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/3.jpg"} height={1} width={200} className=' w-full  rounded-b-xl   '/>
+<Image src={"/image/1.jpg"} height={1} width={50} className=' w-full   '/>
+
+<div className='flex flex-row justify-between my-2 items-center '>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Like</span> < AiOutlineLike/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Comment</span> < TbMessage2/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Share</span> < RiShareForwardLine/> 
+</div>
+</div>
+
 
 </div>
 <br />
 <div className='post flex flex-col justify-between '>
-  <div className='flex flex-row justify-between items-center py-4'>
-  <div className='flex flex-row items-center pt-3 pl-2' >
+  <div className='flex flex-row justify-between items-center py-1'>
+  <div className='flex flex-row items-center  pl-2' >
 <Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/4.jpg"} height={1} width={200} className=' w-full  rounded-b-xl   '/>
+<Image src={"/image/4.jpg"} height={1} width={50} className=' w-full   '/>
+
+<div className='flex flex-row justify-between my-2 items-center '>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Like</span> < AiOutlineLike/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Comment</span> < TbMessage2/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Share</span> < RiShareForwardLine/> 
+</div>
+</div>
+
 
 </div>
+<br />
+<div className='post flex flex-col justify-between '>
+  <div className='flex flex-row justify-between items-center py-1'>
+  <div className='flex flex-row items-center  pl-2' >
+<Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
+<p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
+</div>
+<HiOutlineDotsHorizontal className='mr-3 mt-2'/>
+  </div>
+ 
+<Image src={"/image/3.jpg"} height={1} width={50} className=' w-full   '/>
+
+<div className='flex flex-row justify-between my-2 items-center '>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Like</span> < AiOutlineLike/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Comment</span> < TbMessage2/> 
+</div>
+<div className='flex flex-row items-center text-gray-600 mx-10  '>
+<span>Share</span> < RiShareForwardLine/> 
+</div>
+</div>
+
+
+</div>
+<br />
+
 
     </div></div>
   )
