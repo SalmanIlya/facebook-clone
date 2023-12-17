@@ -19,12 +19,12 @@ const Box2 = () => {
             
 <div className='flex flex-row justify-center items-center mx-3'>
   
-  <Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
+  <Image alt='' src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
   <input type="text" placeholder="What's on Your mind, " className='bg-gray-200 border-none outline-none rounded-full px-3 py-1  w-full mx-1' /></div>
   <hr  className='mt-3 mx-4'/>
 
   <div className='flex flex-row mt-7 justify-center items-center '>
-  <div className='flex flex-row   h-full w-full justify-center items-center'>
+  <div className=' cursor-pointer flex flex-row   h-full w-full justify-center items-center active:bg-blue-200 active:text-blue-700' >
     <RiVideoAddFill className='text-red-500 text-2xl'/><span className='text-sm text-gray-500 ml-1'>Live video</span>
   </div>
   <div className='flex flex-row   h-full w-full justify-center items-center'>
@@ -40,13 +40,13 @@ const Box2 = () => {
 <div className='post flex flex-col justify-between '>
   <div className='flex flex-row justify-between items-center py-1'>
   <div className='flex flex-row items-center  pl-2' >
-<Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
+<Image alt='' src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/4.jpg"} height={1} width={50} className=' w-full   '/>
+<Image alt='' src="https://cdn.pixabay.com/photo/2023/10/15/11/26/snowman-8316681_1280.jpg" height={1} width={50} className=' w-full   '/>
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
@@ -66,13 +66,13 @@ const Box2 = () => {
 <div className='post flex flex-col justify-between '>
   <div className='flex flex-row justify-between items-center py-1'>
   <div className='flex flex-row items-center  pl-2' >
-<Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
+<Image alt='' src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/1.jpg"} height={1} width={50} className=' w-full   '/>
+<Image alt='' src={"/image/1.jpg"} height={1} width={50} className=' w-full   '/>
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
@@ -92,13 +92,13 @@ const Box2 = () => {
 <div className='post flex flex-col justify-between '>
   <div className='flex flex-row justify-between items-center py-1'>
   <div className='flex flex-row items-center  pl-2' >
-<Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
+<Image alt='' src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/4.jpg"} height={1} width={50} className=' w-full   '/>
+<Image alt='' src={"/image/4.jpg"} height={1} width={50} className=' w-full   '/>
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
@@ -118,13 +118,13 @@ const Box2 = () => {
 <div className='post flex flex-col justify-between '>
   <div className='flex flex-row justify-between items-center py-1'>
   <div className='flex flex-row items-center  pl-2' >
-<Image src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
+<Image alt='' src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
 <p className='text-gray-500 text-sm ml-2 font-bold'>salaman Ilyas</p>
 </div>
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image src={"/image/3.jpg"} height={1} width={50} className=' w-full   '/>
+<Image alt='' src={"/image/3.jpg"} height={1} width={50} className=' w-full   '/>
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
