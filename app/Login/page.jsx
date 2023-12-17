@@ -3,10 +3,14 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 import Link from "next/link";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { saveUser } from "../Store/User";
 
 const page = () => {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [link,setLink]=useState("")
+  const dispatch=useDispatch()
   const clickHandle = () => {
     if (!Email) {
       alert("all fields are required");
@@ -14,9 +18,15 @@ const page = () => {
       alert("all fields are required");
     } else {
       axios
-        .post("", { Email, Password })
-        .then(() => {})
-        .catch(() => {});
+        .post("http://localhost:5000/auth/Login", { "email":Email, "password":Password })
+        .then((res) => {
+          console.log("working");
+          setLink("/")
+         dispatch(saveUser(res.data));
+        })
+        .catch((err) => {
+          console.log("error :",err);
+        });
     }
   };
 
@@ -37,13 +47,17 @@ const page = () => {
                 type="text"
                 className="input-login"
                 placeholder="Email address"
+                value={Email}
+                onChange={(e)=>{setEmail(e.target.value)}}
               />
               <input
-                type="text"
+                type="password"
+                value={Password}
+                onChange={(e)=>{setPassword(e.target.value)}}
                 className="input-login"
                 placeholder="Password"
               />
-              <button className="login-btn">Log in</button>
+              <Link href={link} className="login-btn" onClick={clickHandle}>Log in</Link>
               <Link href="/" className="login-link">
                 Forgotten password?
               </Link>
@@ -53,7 +67,7 @@ const page = () => {
                 <button
                   className="login-btn-2"
                   onClick={() => {
-                    clickHandle();
+                 
                   }}
                 >
                   Create new account
