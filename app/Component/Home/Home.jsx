@@ -5,8 +5,11 @@ import "./Style.css"
 import Box1 from './Box1'
 import Box2 from './Box2'
 import Box3 from './Box3'
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+  const User=useSelector((state)=>state.User.user)
+  console.log("User : ",User);
   return (
     <div className=''>
       <Navbar/>
