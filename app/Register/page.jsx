@@ -3,14 +3,22 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import Link from "next/link";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { saveUser } from "../Store/User";
 
 const page = () => {
   const [username, setusername] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [ConfurmPassword, setConfurmPassword] = useState("");
+  const [link,SetLink]=useState("")
+const disptach=useDispatch()
+const User=useSelector((state)=>state.User.user)
 
-  const registerUser = () => {
+
+
+  const registerUser =async () => {
+
     if (!username) {
       alert("all fields are required");
     } else if (!Email) {
@@ -25,20 +33,25 @@ const page = () => {
     } else {
       if (Password === ConfurmPassword) {
         const userdata = {
-          username,
-          Email,
-          Password,
+          "username":username,
+          "email":Email,
+          "password":Password,
         };
-        axios
-          .post("", userdata)
-          .then(() => {})
-          .catch(() => {});
+    SetLink("/Profile")
+        
+       
+         await axios.post("http://localhost:5000/auth/Register", userdata).then((res)=>{
+      disptach(saveUser(res.data))
+         }).catch((err)=>{
+          console.log("error :" ,err);
+         })
+      
       } else {
         alert("password does not match");
       }
     }
   };
-  useEffect(() => {}, []);
+
 
   return (
     <div className="relative overflow-x-hidden">
@@ -58,7 +71,7 @@ const page = () => {
                 value={username}
                 onChange={(e) => setusername(e.target.value)}
                 className="input-reg"
-                placeholder="Email address "
+                placeholder="User name "
               />
               <input
                 type="text"
@@ -69,24 +82,22 @@ const page = () => {
               />
               <input
                 value={Password}
-                type="text"
+                type="password"
                 className="input-reg"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
               <input
                 value={ConfurmPassword}
-                type="text"
+                type="Password"
                 className="input-reg"
                 placeholder="Confurm Password"
                 onChange={(e) => setConfurmPassword(e.target.value)}
               />
               <Link
-                href={""}
+                href={link}
                 className="reg-btn"
-                onClick={() => {
-                  registerUser();
-                }}
+                onClick={registerUser}
               >
                 Sign up
               </Link>
