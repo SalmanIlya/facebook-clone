@@ -5,6 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../Store/User";
+import {ToastContainer,toast} from "react-toastify"
 
 const page = () => {
   const [Email, setEmail] = useState("");
@@ -14,9 +15,10 @@ const page = () => {
   const User=useSelector((state)=>state.User.user)
   const clickHandle =async () => {
     if (!Email) {
-      alert("all fields are required");
+      toast.error("all fields are required");
+
     } else if (!Password) {
-      alert("all fields are required");
+      toast.error("all fields are required");
     } else {
       const data={
          "email":Email,
@@ -25,13 +27,15 @@ const page = () => {
      await axios
         .post("http://localhost:5000/auth/Login",data )
         .then((res) => {
-// console.log(res.data.user);
+
          dispatch(saveUser(res.data.user));
          setLink("/")
+         toast.success("Login Successfully");
+
 
         })
         .catch((err) => {
-          console.log("error :",err);
+          toast.error("Email or password is incorrect");
         });
     }
   };
@@ -41,6 +45,7 @@ const page = () => {
       <div className={` main-login`}>
         <div className="sec-main-login">
           <div className="box1-facebook-login">
+            <ToastContainer/>
             <h1 className="login-heading">facebook</h1>
             <p className="pragraf-login ">
               Facebook helps you connect and share <br /> with the people in
