@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Style.css";
 import Link from "next/link";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../Store/User";
 
 const page = () => {
@@ -11,18 +11,24 @@ const page = () => {
   const [Password, setPassword] = useState("");
   const [link,setLink]=useState("")
   const dispatch=useDispatch()
-  const clickHandle = () => {
+  const User=useSelector((state)=>state.User.user)
+  const clickHandle =async () => {
     if (!Email) {
       alert("all fields are required");
     } else if (!Password) {
       alert("all fields are required");
     } else {
-      axios
-        .post("http://localhost:5000/auth/Login", { "email":Email, "password":Password })
+      const data={
+         "email":Email,
+        "password":Password 
+      }
+     await axios
+        .post("http://localhost:5000/auth/Login",data )
         .then((res) => {
-          console.log("working");
-          setLink("/")
-         dispatch(saveUser(res.data));
+// console.log(res.data.user);
+         dispatch(saveUser(res.data.user));
+         setLink("/")
+
         })
         .catch((err) => {
           console.log("error :",err);
