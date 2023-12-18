@@ -267,6 +267,33 @@
           display: none;
         }
     }
+    @media only screen and (max-width: 380px) {
+      .main-reg {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        
+      }
+      .box1-facebook-reg{
+        text-align: center !important;
+        
+      }
+      .reg-heading {
+text-align: center;
+margin-right: 40px;
+      }
+      .box2-reg-form{
+        margin-right:40px !important;
+      }
+      .input-reg{
+        width: 15rem;
+      }
+      .reg-btn{
+        width: 15rem;
+      }
+         
+        }
     @media only screen and (max-width: 320px) {
       .reg-heading {
          
@@ -283,11 +310,11 @@
             }
             .reg-btn{
               width: 12rem;
-              margin-right: 100px;
+              margin-right: 0px;
             }
             .reg-btn-2{
               width: 12rem;
-              margin-right: 100px;
+              margin-right: 0px;
             }
             .input-reg {
               width: 12rem;
@@ -296,7 +323,7 @@
               border-radius: 6px;
               padding: 0.87rem 1rem;
               margin-top:0.93rem;
-              margin-right: 80px;
+              margin-right: s0px;
             }
             .box2-reg-form {
                 height:24.86rem;
@@ -327,11 +354,11 @@
               }
               .reg-btn{
                 width: 12rem;
-                margin-right: 70px;
+                
               }
               .reg-btn-2{
                 width: 12rem;
-                margin-right: 70px;
+               
               }
               .input-reg {
                 width: 12rem;
@@ -340,7 +367,7 @@
                 border-radius: 6px;
                 padding: 0.87rem 1rem;
                 margin-top:0.93rem;
-                margin-right: 100px;
+                
               }
               .box2-reg-form {
                   height:24.86rem;
