@@ -18,7 +18,8 @@ if(User.email!==undefined){
             <Image alt='' src={User.profilePhoto==="" ? "/image/profile.jpg":User.profilePhoto} height={250} width={250} className='rounded-full h-64 absolute border-2 border-white top-60 left-60' />
            <div className='flex flex-col items-center'>
            <p className='text-3xl mt-5 font-bold text-gray-800 '>{User.username} </p>
-            <p  className="font-light text-gray-400 ml-20 ">{User.followers.length===undefined ? 10:User.followers.length }  friends </p>
+            <p  className="font-light text-gray-400  ">{User.followers.length===undefined ? 10:User.followers.length }  friends </p>
+          <button className='bg-blue-500 text-white px-3 py-2 rounded-lg mt-2'>Edit</button>
            </div>
             
           </div>
