@@ -46,7 +46,7 @@ const Box2 = () => {
 <HiOutlineDotsHorizontal className='mr-3 mt-2'/>
   </div>
  
-<Image alt='' src="https://cdn.pixabay.com/photo/2023/10/15/11/26/snowman-8316681_1280.jpg" height={1} width={50} className=' w-full   '/>
+<Image alt='' src="/image/1.jpg" height={1} width={50} className=' w-full   '/>
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
