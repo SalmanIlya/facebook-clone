@@ -5,13 +5,14 @@ import Link from "next/link";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../Store/User";
-
+import {useRouter} from ' next/navigation';
 const page = () => {
+
+  const routes=useRouter()
   const [username, setusername] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [ConfurmPassword, setConfurmPassword] = useState("");
-  const [link,SetLink]=useState("")
 const disptach=useDispatch()
 const User=useSelector((state)=>state.User.user)
 
@@ -37,10 +38,11 @@ const User=useSelector((state)=>state.User.user)
           "email":Email,
           "password":Password,
         };
-    SetLink("/Profile")
+  
         
        
          await axios.post("http://localhost:5000/auth/Register", userdata).then((res)=>{
+          routes.push("/Profile")
       disptach(saveUser(res.data))
          }).catch((err)=>{
           console.log("error :" ,err);
@@ -94,13 +96,13 @@ const User=useSelector((state)=>state.User.user)
                 placeholder="Confurm Password"
                 onChange={(e) => setConfurmPassword(e.target.value)}
               />
-              <Link
-                href={link}
+              <button
+               
                 className="reg-btn"
                 onClick={registerUser}
               >
                 Sign up
-              </Link>
+              </button>
               <Link href={"/Login"}>
                 {" "}
                 <button className="reg-btn-2">Al'ready have an account</button>
