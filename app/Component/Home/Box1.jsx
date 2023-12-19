@@ -13,7 +13,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const Box = () => {
   return (
     <div>
-         <div className='h-box1 w-64 flex flex-col'>
+         <div className='h-box1 w-40 mt flex flex-col mt-6'>
 
 <div className='flex flex-row justify-start mt-5 ml-2 '>
 <Image src={"/image/profile.jpg"} className="rounded-full" height={20} width={30}/>
