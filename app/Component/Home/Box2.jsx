@@ -14,7 +14,7 @@ const Box2 = () => {
          <div className="box2 mx-5">
             <br />
         
-          <div className="postdiv p-2 pt-3">
+          <div className="postdiv  p-2 pt-3 flex flex-row sm:flex-col md:flex-col lg:flex-col xl:flex-col 2xl:flex-col sm:items-stretch md:items-stretch lg:items-stretch xl:items-stretch 2xl:items-stretch    justify-around items-center ">
             
             
 <div className='flex flex-row justify-center items-center mx-3'>
@@ -24,13 +24,13 @@ const Box2 = () => {
   <hr  className='mt-3 mx-4'/>
 
   <div className='flex flex-row mt-7 justify-center items-center '>
-  <div className=' cursor-pointer flex flex-row   h-full w-full justify-center items-center active:bg-blue-200 active:text-blue-700' >
+  <div className='hidden sm:flex md:flex lg:flex xl:flex 2xl:flex   text-xs cursor-pointer  flex-row   h-full w-full justify-center items-center active:bg-blue-200 active:text-blue-700' >
     <RiVideoAddFill className='text-red-500 text-2xl'/><span className='text-sm text-gray-500 ml-1'>Live video</span>
   </div>
-  <div className='flex flex-row   h-full w-full justify-center items-center'>
-    <MdPhotoLibrary className='text-green-600 text-2xl'/><span className='text-sm text-gray-500 ml-1'>Photo/video</span>
+  <div className=' flex flex-col  md:flex-row lg:flex-row xl:flex-row 2xl:flex-row  sm:flex-row   h-full w-full justify-center items-center'>
+    <MdPhotoLibrary className='text-green-600 text-2xl icon'/><span className='text-sm text-gray-500 ml-1  '>Photo <span className='hidden'>/video</span></span>
   </div>
-  <div className='flex flex-row   h-full w-full justify-center items-center'>
+  <div className='text-xs sm:flex md:flex lg:flex xl:flex 2xl:flex   flex-row   h-full w-full justify-center items-center hidden'>
     <CgSmileMouthOpen className='text-yellow-600 text-2xl'/><span className='text-sm text-gray-500 ml-1'>Feeling/activity</span>
   </div>
   </div>
@@ -50,13 +50,13 @@ const Box2 = () => {
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
-<span>Like</span> < AiOutlineLike/> 
+<span className='hidden md:block sm:block lg:block xl:block 2xl:block '>Like</span> < AiOutlineLike/> 
 </div>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
-<span>Comment</span> < TbMessage2/> 
+<span className='hidden md:block sm:block lg:block xl:block 2xl:block'>Comment</span> < TbMessage2/> 
 </div>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
-<span>Share</span> < RiShareForwardLine/> 
+<span className='hidden md:block sm:block lg:block xl:block 2xl:block'>Share</span> < RiShareForwardLine/> 
 </div>
 </div>
 
@@ -76,13 +76,13 @@ const Box2 = () => {
 
 <div className='flex flex-row justify-between my-2 items-center '>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
-<span>Like</span> < AiOutlineLike/> 
+<span className='hidden md:block sm:block lg:block xl:block 2xl:block'>Like</span> < AiOutlineLike/> 
 </div>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
-<span>Comment</span> < TbMessage2/> 
+<span className='hidden md:block sm:block lg:block xl:block 2xl:block'>Comment</span> < TbMessage2/> 
 </div>
 <div className='flex flex-row items-center text-gray-600 mx-10  '>
-<span>Share</span> < RiShareForwardLine/> 
+<span className='hidden md:block sm:block lg:block xl:block 2xl:block'>Share</span> < RiShareForwardLine/> 
 </div>
 </div>
 
