@@ -6,11 +6,13 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../Store/User";
 import {ToastContainer,toast} from "react-toastify"
+import { useRouter } from 'next/navigation';
 
 const page = () => {
+  
+  const router = useRouter();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [link,setLink]=useState("")
   const dispatch=useDispatch()
   const User=useSelector((state)=>state.User.user)
   const clickHandle =async () => {
@@ -29,7 +31,8 @@ const page = () => {
         .then((res) => {
 
          dispatch(saveUser(res.data.user));
-         setLink("/")
+         router.push('/');
+
          toast.success("Login Successfully");
 
 
@@ -55,7 +58,7 @@ const page = () => {
           <div>
             <div className="box2-login-form">
               <input
-                type="text"
+                type="email"
                 className="input-login"
                 placeholder="Email address"
                 value={Email}
@@ -68,7 +71,7 @@ const page = () => {
                 className="input-login"
                 placeholder="Password"
               />
-              <Link href={link} className="login-btn" onClick={clickHandle}>Log in</Link>
+              <button  className="login-btn" onClick={clickHandle}>Log in</button>
               <Link href="/" className="login-link">
                 Forgotten password?
               </Link>
