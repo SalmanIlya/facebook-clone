@@ -20,10 +20,10 @@ const Box2 = () => {
 <div className='flex flex-row justify-center items-center mx-3'>
   
   <Image alt='' src={"/image/profile.jpg"} className='profile rounded-full mx-1' height={30} width={30} />
-  <input type="text" placeholder="What's on Your mind, " className='bg-gray-200 border-none outline-none rounded-full px-3 py-1  w-full mx-1' /></div>
+  <input type="text" placeholder="What's on Your mind, " className='bg-gray-200 border-none outline-none rounded-full px-3 py-1  w-full mx-1 text-sm' /></div>
   <hr  className='mt-3 mx-4'/>
 
-  <div className='flex flex-row mt-7 justify-center items-center '>
+  <div className='flex flex-row sm:mt-7 md:mt-7 lg:mt-7 xl:mt-7 2xl:mt-7 justify-center items-center '>
   <div className='hidden sm:flex md:flex lg:flex xl:flex 2xl:flex   text-xs cursor-pointer  flex-row   h-full w-full justify-center items-center active:bg-blue-200 active:text-blue-700' >
     <RiVideoAddFill className='text-red-500 text-2xl'/><span className='text-sm text-gray-500 ml-1'>Live video</span>
   </div>
