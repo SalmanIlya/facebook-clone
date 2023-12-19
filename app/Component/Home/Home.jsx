@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className=''>
       <Navbar/>
-      <div className='bg-gray-100 min-h-screen max-h-auto '>
+      <div className='bg-gray-100 min-h-screen max-h-auto m-auto '>
         <div className='flex flex-row justify-center  '>
           {/* box-1  */}
          <div className='hidden lg:block xl:block'>
