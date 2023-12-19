@@ -21,7 +21,7 @@ if(User.email!==undefined){
                :User.profilePhoto
                } height={0} width={0} className='rounded-full h-36 w-36 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-60 lg:h-60 absolute border-2 border-white top-40 left-5 2xl:left-60 md:left-20 lg:left-40   ' />
            <div className='flex flex-col sm:items-end md:items-center lg:items-center xl:items-center 2xl:items-center mr-40 items-end    w-full  mt-14'>
-           <p className='text-3xl mt-5 font-bold text-gray-800 '>{User.username} hello </p>
+           <p className='text-2xl mt-5 font-bold text-gray-800 '>{User.username}</p>
             <p  className="font-light text-gray-400  ">{User.followers.length===undefined ? 10:User.followers.length }  friends </p>
           <button className='hover:bg-blue-700 bg-blue-500 text-white px-3 py-2 rounded-lg mt-2 w-20'>Edit</button>
           <button className='bg-blue-500 text-white px-3 py-2 rounded-lg mt-2 w-20 hover:bg-blue-700 '>LogOut</button>
