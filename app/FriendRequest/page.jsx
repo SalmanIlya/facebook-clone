@@ -51,7 +51,7 @@ const page = () => {
     <div>
         <Navbar/>
         <div className='max-h-auto min-h-screen bg-gray-100  px-20'>
-          <p className='font-bold text-lg text-gray-500 text-left ml-24 py-10' >People you may know</p>
+          <p className='font-bold text-lg text-gray-500 text-center py-5 ' >People you may know</p>
           <div>
             
 
