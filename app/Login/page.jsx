@@ -5,37 +5,33 @@ import Link from "next/link";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../Store/User";
-import {ToastContainer,toast} from "react-toastify"
-import { useRouter } from 'next/navigation';
+import { ToastContainer, toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const page = () => {
-  
   const router = useRouter();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const dispatch=useDispatch()
-  const User=useSelector((state)=>state.User.user)
-  const clickHandle =async () => {
+  const dispatch = useDispatch();
+  const User = useSelector((state) => state.User.user);
+  const clickHandle = async () => {
     if (!Email) {
       toast.error("all fields are required");
-
     } else if (!Password) {
       toast.error("all fields are required");
     } else {
-      const data={
-         "email":Email,
-        "password":Password 
-      }
-     await axios
-        .post("http://localhost:5000/auth/Login",data )
+      const data = {
+        email: Email,
+        password: Password,
+      };
+      await axios
+        .post("http://localhost:5000/auth/Login", data)
         .then((res) => {
+          dispatch(saveUser(res.data));
 
-         dispatch(saveUser(res.data.user));
-         router.push('/');
+          router.push("/");
 
-         toast.success("Login Successfully");
-
-
+          toast.success("Login Successfully");
         })
         .catch((err) => {
           toast.error("Email or password is incorrect");
@@ -48,7 +44,7 @@ const page = () => {
       <div className={` main-login`}>
         <div className="sec-main-login">
           <div className="box1-facebook-login">
-            <ToastContainer/>
+            <ToastContainer />
             <h1 className="login-heading">facebook</h1>
             <p className="pragraf-login ">
               Facebook helps you connect and share <br /> with the people in
@@ -62,28 +58,29 @@ const page = () => {
                 className="input-login"
                 placeholder="Email address"
                 value={Email}
-                onChange={(e)=>{setEmail(e.target.value)}}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
               <input
                 type="password"
                 value={Password}
-                onChange={(e)=>{setPassword(e.target.value)}}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
                 className="input-login"
                 placeholder="Password"
               />
-              <button  className="login-btn" onClick={clickHandle}>Log in</button>
+              <button className="login-btn" onClick={clickHandle}>
+                Log in
+              </button>
               <Link href="/" className="login-link">
                 Forgotten password?
               </Link>
               <div className="login-underline"></div>
               <Link href={"/Register"}>
                 {" "}
-                <button
-                  className="login-btn-2"
-                  onClick={() => {
-                 
-                  }}
-                >
+                <button className="login-btn-2" onClick={() => {}}>
                   Create new account
                 </button>
               </Link>
