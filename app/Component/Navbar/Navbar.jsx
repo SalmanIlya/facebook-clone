@@ -13,7 +13,6 @@ import Link from 'next/link';
 
 const Navbar = () => {
 const PathName=usePathname()
- console.log(PathName==="/");
 
   return (
     <div className=''>
