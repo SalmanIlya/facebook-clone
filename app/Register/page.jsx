@@ -5,7 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { saveUser } from "../Store/User";
-import {useRouter} from ' next/navigation';
+import { useRouter } from 'next/navigation'
 const page = () => {
 
   const routes=useRouter()
@@ -43,6 +43,7 @@ const User=useSelector((state)=>state.User.user)
        
          await axios.post("http://localhost:5000/auth/Register", userdata).then((res)=>{
           routes.push("/Profile")
+          console.log("working");
       disptach(saveUser(res.data))
          }).catch((err)=>{
           console.log("error :" ,err);
